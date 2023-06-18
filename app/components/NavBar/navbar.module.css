@@ -1,0 +1,112 @@
+/* CSS */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+}
+
+.chat-box {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-box p {
+  margin-bottom: 5px;
+}
+
+.chat-box a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.chat-box a:hover {
+  text-decoration: underline;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.animated-text {
+  display: inline-block;
+  animation: pulse 2s infinite;
+  transition: color 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fadeIn {
+  animation: fade-in 5s infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.code-text {
+  white-space: pre-wrap;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #1e1e1e;
+  color: #d4d;
+}

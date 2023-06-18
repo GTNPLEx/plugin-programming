@@ -1,0 +1,91 @@
+/* searchbar.module.css */
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-input input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.search-input button {
+  background-color: #3490dc;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.chat-box {
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.chat-box button {
+  background-color: #3490dc;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.format-select {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.format-select label {
+  margin-right: 10px;
+}
+
+.format-select select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.popup-window {
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.popup-window .code-editor {
+  margin-bottom: 10px;
+}
+
+.popup-window button {
+  background-color: #555555;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
