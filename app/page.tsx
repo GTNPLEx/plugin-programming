@@ -1,9 +1,19 @@
-import Image from 'next/image'
+import React from 'react';
+import Navbar from '../app/components/NavBar/NavBar';
+import Sidebar from '../app/components/SideBar/SideBar';
+import Footer from '../app/components/Footer/Footer';
+import Header from '../app/components/Header/Header';
 
-export default function Home() {
+const Page: React.FC = () => {
   return (
-   <div>
-    Hello world
-   </div>
-  )
-}
+    <>
+      <Navbar />
+      <Sidebar />
+      <Header />
+      {/* Add your content here */}
+      <Footer />
+    </>
+  );
+};
+
+export default Page;
