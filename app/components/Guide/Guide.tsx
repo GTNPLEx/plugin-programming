@@ -34,7 +34,7 @@ const Guide: React.FC<GuideProps> = ({ query, onClose, onSearch }) => {
               To use the search bar, simply enter your query and press Enter. The search results will be displayed below.
             </p>
             <p className={styles.guideText}>
-              To navigate through the page, use the navigation links provided. Click on "Home" to go to the home page, "About" to learn more about the site, and "Contact" to get in touch with us.
+              To navigate through the page, use the navigation links provided. Click on &ldquo;Home&rdquo; to go to the home page, &ldquo;About&rdquo; to learn more about the site, and &ldquo;Contact&rdquo; to get in touch with us.
             </p>
             <p className={styles.guideText}>
               Search Query: <span className={styles.guideQuery}>{query}</span>
