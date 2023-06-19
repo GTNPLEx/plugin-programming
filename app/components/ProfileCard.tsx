@@ -33,7 +33,7 @@ const ProfileCard: React.FC = () => {
     >
       <div className="bg-white rounded-md p-2 flex">
         <div className="w-10 h-10 rounded-full overflow-hidden mr-2">
-          <Image src=".a/yeswecan.png" alt="Avatar" width={40} height={40} className="object-cover" />
+          <Image src="./yeswecan.png" alt="Avatar" width={40} height={40} className="object-cover" />
         </div>
         <div>
           <h3 className="text-base font-semibold">Patricia Bronckers</h3>

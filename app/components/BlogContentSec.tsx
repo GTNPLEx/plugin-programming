@@ -1,13 +1,16 @@
 'use client'
 import React from 'react';
+import Image from 'next/image';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import styles from 'app/components/BlogContent/blogContenSec.module.css';
 import gifImage from 'public/success.gif';
 
 const BlogContentSec = () => {
+
   return (
     <div>
+        <div>    
       <h1>Step-by-Step Guide to Enhance Security Measures in Your Code Execution Process</h1>
       <p>Introduction paragraph...</p>
 
@@ -20,7 +23,7 @@ const BlogContentSec = () => {
 
 
         <SyntaxHighlighter language="javascript" style={atomDark}>
-        {`// Code snippet example for code sanitization
+            {`// Code snippet example for code sanitization
                 const handleRunCode = () => {
                 const sanitizedCode = DOMPurify.sanitize(codeSnippet);
 
@@ -31,54 +34,54 @@ const BlogContentSec = () => {
                     console.error('Error executing code:', error);
                 }
                 };`}
-      </SyntaxHighlighter>
+            </SyntaxHighlighter>
 
 
-        <h2>Step 2: Use Content Security Policies (CSP)</h2>
+       <h2>Step 2: Use Content Security Policies (CSP)</h2>
 
         <p>1. Familiarize yourself with Content Security Policies and their syntax and directives.</p>
         <p>2. Determine the trusted sources for scripts, stylesheets, and other resources in your application.</p>
         <p>3. Implement and configure the Content Security Policy for your web application to allow only trusted sources.</p>
         <p>4. Regularly review and update the Content Security Policy to adapt to any changes in trusted sources or emerging threats.</p>
 
-        <SyntaxHighlighter language="javascript" style={atomDark}>
-        {`// Code snippet example for code sanitization
-                const handleRunCode = () => {
-                const sanitizedCode = DOMPurify.sanitize(codeSnippet);
+            <SyntaxHighlighter language="javascript" style={atomDark}>
+                {`// Code snippet example for code sanitization
+                    const handleRunCode = () => {
+                    const sanitizedCode = DOMPurify.sanitize(codeSnippet);
 
-                // Execute the sanitized code
-                try {
-                    eval(sanitizedCode);
-                } catch (error) {
-                    console.error('Error executing code:', error);
-                }
-                };`}
-      </SyntaxHighlighter>
+                    // Execute the sanitized code
+                    try {
+                        eval(sanitizedCode);
+                    } catch (error) {
+                        console.error('Error executing code:', error);
+                    }
+                    };`}
+                </SyntaxHighlighter>
 
         <h2>Step 3: Implement Code Review</h2>
 
-        <p>1. Establish a code review process within your development team.</p>
-        <p>2. Identify experienced developers who will be responsible for reviewing user-submitted code snippets..</p>
-        <p>3. Define code review guidelines, including security considerations, coding standards, and performance optimization.</p>
-        <p>4. Provide training and resources to reviewers to ensure they are equipped with the necessary knowledge and tools.</p>
-        <p>5. Require all user-submitted code snippets to undergo the code review process before execution.</p>
-        <p>5. Require all user-submitted code snippets to undergo the code review process before execution.</p>
-        <p>6. Communicate feedback and recommendations to the code submitter for necessary revisions or improvements</p>
-        <p>7. Continuously update the code review guidelines based on new findings and evolving security considerations.</p>
+            <p>1. Establish a code review process within your development team.</p>
+            <p>2. Identify experienced developers who will be responsible for reviewing user-submitted code snippets..</p>
+            <p>3. Define code review guidelines, including security considerations, coding standards, and performance optimization.</p>
+            <p>4. Provide training and resources to reviewers to ensure they are equipped with the necessary knowledge and tools.</p>
+            <p>5. Require all user-submitted code snippets to undergo the code review process before execution.</p>
+            <p>5. Require all user-submitted code snippets to undergo the code review process before execution.</p>
+            <p>6. Communicate feedback and recommendations to the code submitter for necessary revisions or improvements</p>
+            <p>7. Continuously update the code review guidelines based on new findings and evolving security considerations.</p>
 
-        <SyntaxHighlighter language="javascript" style={atomDark}>
-        {`// Code snippet example for code sanitization
-                const handleRunCode = () => {
-                const sanitizedCode = DOMPurify.sanitize(codeSnippet);
+            <SyntaxHighlighter language="javascript" style={atomDark}>  
+                {`// Code snippet example for code sanitization
+                        const handleRunCode = () => {
+                        const sanitizedCode = DOMPurify.sanitize(codeSnippet);
 
-                // Execute the sanitized code
-                try {
-                    eval(sanitizedCode);
-                } catch (error) {
-                    console.error('Error executing code:', error);
-                }
-                };`}
-      </SyntaxHighlighter>
+                        // Execute the sanitized code
+                        try {
+                            eval(sanitizedCode);
+                        } catch (error) {
+                            console.error('Error executing code:', error);
+                        }
+                        };`}
+                </SyntaxHighlighter>
 
         <h2>Step 4: Integrate a Malware Scanner</h2>
 
@@ -91,22 +94,22 @@ const BlogContentSec = () => {
             <p>7. Regularly update the malware scanning tool or service to ensure you have the latest security definitions and features.</p>
 
 
-            <SyntaxHighlighter language="javascript" style={atomDark}>
-        {`// Code snippet example for code sanitization
-                const handleRunCode = () => {
-                const sanitizedCode = DOMPurify.sanitize(codeSnippet);
+                <SyntaxHighlighter language="javascript" style={atomDark}>
+                {`// Code snippet example for code sanitization
+                        const handleRunCode = () => {
+                        const sanitizedCode = DOMPurify.sanitize(codeSnippet);
 
-                // Execute the sanitized code
-                try {
-                    eval(sanitizedCode);
-                } catch (error) {
-                    console.error('Error executing code:', error);
-                }
-                };`}
-      </SyntaxHighlighter>
+                        // Execute the sanitized code
+                        try {
+                            eval(sanitizedCode);
+                        } catch (error) {
+                            console.error('Error executing code:', error);
+                        }
+                        };`}
+                </SyntaxHighlighter>
 
 
-            <h2>Step 5: Require Pin/Authentication</h2>
+        <h2>Step 5: Require Pin/Authentication</h2>
 
             <p>1.Implement a pin or authentication mechanism to restrict access to the code execution functionality.</p>
             <p>2. Determine the appropriate level of authentication required based on the sensitivity of the executed code and user privileges.</p>
@@ -125,10 +128,10 @@ const BlogContentSec = () => {
                                 console.error('Error executing code:', error);
                             }
                             };`}
-                </SyntaxHighlighter>    
+                    </SyntaxHighlighter>    
 
 
-            <h2>Step 6: Regularly Update Security Measures</h2>
+        <h2>Step 6: Regularly Update Security Measures</h2>
 
             <p>1.Monitor security vulnerabilities and emerging threats relevant to your code execution process.</p>
             <p>2. Determine the appropriate level of authentication required based on the sensitivity of the executed code and user privileges.</p>
@@ -148,30 +151,34 @@ const BlogContentSec = () => {
                                 console.error('Error executing code:', error);
                             }
                             };`}
-                </SyntaxHighlighter> 
+                    </SyntaxHighlighter> 
 
-                <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
 
-                <p>Remember that security is an ongoing effort, and it's essential to regularly reassess and update your security measures to address new threats and vulnerabilities.</p>
+            <p>Remember that security is an ongoing effort, and it&apos;s  essential to regularly reassess and update your security measures to address new threats and vulnerabilities.</p>
 
                 
-                    <SyntaxHighlighter language="javascript" style={atomDark}>
-                        {`// Code snippet example for code sanitization
-                                const handleRunCode = () => {
-                                const sanitizedCode = DOMPurify.sanitize(codeSnippet);
+                <SyntaxHighlighter language="javascript" style={atomDark}>
+                    {`// Code snippet example for code sanitization
+                            const handleRunCode = () => {
+                            const sanitizedCode = DOMPurify.sanitize(codeSnippet);
 
-                                // Execute the sanitized code
-                                try {
-                                    eval(sanitizedCode);
-                                } catch (error) {
-                                    console.error('Error executing code:', error);
-                                }
-                                };`}
-                    </SyntaxHighlighter>
-                    <div className={styles.animationContainer}>
-                        <img src={gifImage.src} alt="Interactive GIF animation" className={styles.animation} />
-                    </div>
+                            // Execute the sanitized code
+                            try {
+                                eval(sanitizedCode);
+                            } catch (error) {
+                                console.error('Error executing code:', error);
+                            }
+                            };`}
+                    </SyntaxHighlighter> 
+
                 </div>
+                <div className={styles.animationContainer}>
+                    <Image src={gifImage.src} alt="Interactive GIF animation" className={styles.animation} />
+                    </div>
+                    </div>
+   
+                
                 );
             };
 
