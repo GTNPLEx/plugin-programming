@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from 'app/components/SearchBar/SearchBar';
+
 
 const Navbar: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
         <div className="text-xl font-bold">Audio Programming</div>
       </div>
       <div className="flex items-center justify-center flex-grow">
-        <SearchBar />
+     
       </div>
     </nav>
   );

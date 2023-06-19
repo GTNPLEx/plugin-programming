@@ -1,25 +1,24 @@
 import React from 'react';
-import image from 'next/image'
+import Image from 'next/image';
 
-import Navbar from 'app/components/NavBar/Navbar';
-import Sidebar from 'app/components/SideBar/SideBar';
-import BlogContent from 'app/components/BlogContent.tsx/BlogContent';
-import Footer from 'app/components/Footer/Footer';
-import Header from 'app/components/Header/Header';
-
+import Navbar from './Navbar';
+import Sidebar from './components/SideBar';
+import BlogContent from './components/BlogContent';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import CSP from './components/csp';
 
 const Page: React.FC = () => {
   return (
     <>
+      <CSP />
       <Navbar />
       <Sidebar />
       <Header />
-      
 
-      
       {/* Add your content here */}
       <BlogContent />
-      
+
       <Footer />
     </>
   );
