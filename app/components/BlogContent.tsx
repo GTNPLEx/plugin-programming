@@ -1,19 +1,19 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import DOMPurify from 'dompurify';
-
+import AceEditorComponent from '../components/AceEditor';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { FiCopy, FiPlay, FiRefreshCcw } from 'react-icons/fi';
-import AceEditor from 'react-ace';
-import 'ace-builds/src-noconflict/mode-java';
-import 'ace-builds/src-noconflict/mode-python';
-import 'ace-builds/src-noconflict/mode-css';
-import 'ace-builds/src-noconflict/mode-html';
-import 'ace-builds/src-noconflict/mode-c_cpp';
-import 'ace-builds/src-noconflict/theme-github';
 import styles from 'app/components/BlogContent/blog.module.css';
-import Trainer from 'app/components/Trainer'
+import Trainer from 'app/components/Trainer';
+
+let AceEditor;
+
+if (typeof window !== 'undefined') {
+  // Only import AceEditor if running in the browser environment
+  AceEditor = require('react-ace').default;
+}
 
 const BlogContent = () => {
   const [codeSnippet, setCodeSnippet] = useState('// Your code snippet');
@@ -189,43 +189,14 @@ const BlogContent = () => {
         </p>
       </div>
 
-      {/* Code Snippet */}
-      <h2 className={styles['blog-subtitle']}>Code Snippet</h2>
+      return (
+    <div className={styles['blog-container']}>
+      {/* Existing code... */}
+
+    {/* Code Snippet */}
+    <h2 className={styles['blog-subtitle']}>Code Snippet</h2>
       <div className={styles['code-editor']}>
-        <div className={styles['code-actions']}>
-          <button className={styles['action-button']} 
-              onClick={handleCopyText}>
-            <FiCopy />
-          </button>
-
-            {/* Pincode input */}
-              <input type="password" value={pincode} 
-              onChange={handlePincodeChange} />
-
-
-          <button className={styles['action-button']} 
-                onClick={handleRunCode}>
-              <FiPlay />
-            </button>
-
-                {/* Display pincode validation status */}
-                  {isPincodeValid ? <p>Pincode is valid</p> : 
-                    <p>Pincode is invalid</p>}
-
-          <button className={styles['action-button']} 
-                onClick={handleRefreshCode}>
-            <FiRefreshCcw />
-          </button>
-        </div>
-        <div className={styles['language-selector']}>
-          <select value={selectedLanguage} onChange={handleLanguageChange}>
-            <option value="c_cpp">C++</option>
-            <option value="java">Java</option>
-            <option value="python">Python</option>
-            <option value="css">CSS</option>
-            <option value="html">HTML</option>
-          </select>
-        </div>
+        {/* Existing code... */}
         <div className={styles['code-textarea']}>
           <AceEditor
             mode={selectedLanguage}
@@ -248,10 +219,18 @@ const BlogContent = () => {
             <FiCopy />
             <button onClick={handleOpenTrainer}>Open Trainer</button>
 
-                {isTrainerOpen && <Trainer />}
+            {isTrainerOpen && <Trainer />}
           </div>
         </div>
       </div>
+
+      {/* AceEditorComponent */}
+      <AceEditorComponent
+        selectedLanguage={selectedLanguage}
+        codeSnippet={codeSnippet}
+        handleCodeChange={handleCodeChange}
+      />
+    </div>
     </div>
   );
 };
