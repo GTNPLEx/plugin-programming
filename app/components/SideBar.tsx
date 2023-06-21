@@ -1,6 +1,6 @@
 'use client'
-
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Sidebar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -67,11 +67,15 @@ const Sidebar: React.FC = () => {
                 onChange={handleSearchChange}
                 className="w-full p-1 border rounded-md"
               />
-              <ul>
-                {filteredWebsiteContext.map((item, index) => (
-                  <li key={index} className="py-1">{item}</li>
-                ))}
-              </ul>
+                <ul>
+                  {filteredWebsiteContext.map((item, index) => (
+                    <li key={index} className="py-1">
+                      <Link href="/trainer" passHref>
+                        <a>{item}</a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
             </div>
           )}
         </div>

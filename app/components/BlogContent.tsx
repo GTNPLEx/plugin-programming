@@ -13,12 +13,18 @@ import 'ace-builds/src-noconflict/mode-html';
 import 'ace-builds/src-noconflict/mode-c_cpp';
 import 'ace-builds/src-noconflict/theme-github';
 import styles from 'app/components/BlogContent/blog.module.css';
+import Trainer from 'app/components/Trainer'
 
 const BlogContent = () => {
   const [codeSnippet, setCodeSnippet] = useState('// Your code snippet');
   const [selectedLanguage, setSelectedLanguage] = useState('c_cpp');
   const [pincode, setPincode] = useState('');
   const [isPincodeValid, setIsPincodeValid] = useState(false);
+  const [isTrainerOpen, setIsTrainerOpen] = useState(false);
+
+  const handleOpenTrainer = () => {
+    setIsTrainerOpen(true);
+  };
 
   const handleCopyText = () => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -87,6 +93,7 @@ const BlogContent = () => {
       }
     }
   }, [codeSnippet]);
+  
   
   
   return (
@@ -239,6 +246,9 @@ const BlogContent = () => {
           />
           <div className={styles['copy-button']} onClick={handleCopyText}>
             <FiCopy />
+            <button onClick={handleOpenTrainer}>Open Trainer</button>
+
+                {isTrainerOpen && <Trainer />}
           </div>
         </div>
       </div>

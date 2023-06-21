@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -7,6 +8,7 @@ import BlogContent from './components/BlogContent';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import CSP from './components/csp';
+
 
 const Page: React.FC = () => {
   return (
@@ -18,8 +20,9 @@ const Page: React.FC = () => {
 
       {/* Add your content here */}
       <BlogContent />
-
+ 
       <Footer />
+      
     </>
   );
 };

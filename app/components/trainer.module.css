@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  width: fit-content;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.box1 {
+  font-size: 24px;
+}
+
+.box2 {
+  font-size: 16px;
+}
+
+.box3 {
+  font-size: 18px;
+}
+
+.containerBox5 {
+  position: relative;
+}
+
+.box5 {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ff3366;
+  color: #fff;
+  font-size: 16px;
+}
+
+.balloon {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ff3366;
+  color: #fff;
+  font-size: 14px;
+}
+
+.refreshButton {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.inputBox input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff3366;
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+.success {
+  color: #00ff00;
+  margin-top: 10px;
+}
