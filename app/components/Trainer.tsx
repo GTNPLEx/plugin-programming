@@ -1,6 +1,3 @@
-'use client'
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from 'app/components/trainer.module.css';
@@ -59,7 +56,25 @@ const Trainer = () => {
 
   useEffect(() => {
     fetchMessages(); // Fetch initial messages from the server
-    typeWriter();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Code for the typewriter effect
+      // ...
+
+      if (!isTyping) {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isTyping]);
+
+  useEffect(() => {
+ 
   }, []);
 
   return (
