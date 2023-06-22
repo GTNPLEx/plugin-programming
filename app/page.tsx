@@ -7,6 +7,7 @@ import BlogContent from './components/BlogContent';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import CSP from './components/csp';
+import Trainer from './components/Trainer';
 
 const Page: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Page: React.FC = () => {
       <Navbar />
       <Sidebar />
       <Header />
+      <Trainer />
 
       {/* Add your content here */}
       <BlogContent />

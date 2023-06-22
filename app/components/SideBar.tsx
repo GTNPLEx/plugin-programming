@@ -1,6 +1,22 @@
 'use client'
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+
+interface CustomLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+
+const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
+  return (
+    <Link href={href}>
+      <span>{children}</span>
+    </Link>
+  );
+};
+
 
 const Sidebar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -69,7 +85,9 @@ const Sidebar: React.FC = () => {
               />
               <ul>
                 {filteredWebsiteContext.map((item, index) => (
-                  <li key={index} className="py-1">{item}</li>
+                  <li key={index} className="py-1">
+                    <CustomLink href={`/${item.toLowerCase()}`}>{item}</CustomLink>
+                  </li>
                 ))}
               </ul>
             </div>

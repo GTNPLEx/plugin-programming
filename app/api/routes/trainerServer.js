@@ -1,27 +1,12 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const axios = require('axios');
+const { PrismaClient } = require('@prisma/client');
 
 const app = express();
 const port = 3000;
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost/trainer', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((err) => {
-    console.error('Error connecting to MongoDB:', err);
-  });
-
-// Create a schema and model for storing messages
-const messageSchema = new mongoose.Schema({
-  userName: String,
-  message: String,
-  age: Number,
-});
-
-const Message = mongoose.model('Message', messageSchema);
+// Create an instance of Prisma Client
+const prisma = new PrismaClient();
 
 // Fetch message from OpenAI API
 const fetchMessageFromOpenAI = async (userName, age) => {
@@ -32,7 +17,7 @@ const fetchMessageFromOpenAI = async (userName, age) => {
     }, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
       },
     });
 
@@ -48,7 +33,7 @@ app.use(express.json());
 
 app.get('/api/messages', async (req, res) => {
   try {
-    const messages = await Message.find();
+    const messages = await prisma.message.findMany();
     res.json(messages);
   } catch (error) {
     console.error('Error fetching messages:', error);
@@ -66,8 +51,8 @@ app.post('/api/messages', async (req, res) => {
   try {
     const message = await fetchMessageFromOpenAI(userName, age);
 
-    // Save message to MongoDB
-    await Message.create({ userName, message, age });
+    // Save message to MongoDB using Prisma Client
+    await prisma.message.create({ data: { userName, message, age } });
 
     res.json({ message: 'Message created successfully' });
   } catch (error) {
